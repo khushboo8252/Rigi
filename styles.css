@@ -1,0 +1,543 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: black;
+    color: #fff;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+    background: 
+        linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)),
+        url('https://media.istockphoto.com/id/945682204/photo/young-attractive-girls-with-shopping-bags-in-the-city.jpg?s=612x612&w=0&k=20&c=FwM34xir1Jx36lLPLhZOQ8-5i_wnG_siQ1CarT2NuBw=');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding:200px;
+    color: white;
+    min-height: 80vh; /* ensures it takes up most of the screen height */
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-text {
+    flex: 1 1 300px;
+    max-width: 500px;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero-text h1 span {
+    color: #ffd700;
+    font-weight: bold;
+}
+
+.download-btn {
+    padding: 12px 24px;
+    background-color: #ff416c;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.download-btn:hover {
+    background-color: #e63950;
+    transform: scale(1.05);
+}
+
+.hero-image img {
+    max-width: 300px;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+/* Cards / Features */
+.features, .highlights, .testimonials, .join {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+    padding: 10px;
+}
+.card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+
+
+.card {
+    background-color: rgb(197, 191, 191);
+    padding: 25px 20px;
+    border-radius: 15px;
+    flex: 1 1 220px;
+    max-width: 260px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+    color: #ff416c;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+} .card p{
+    color:black
+}
+
+/* Highlights */
+.highlights {
+    background-color: #fff0f3;
+    border-top: 2px solid #ff416c20;
+    border-bottom: 2px solid #ff416c20;
+}
+
+.highlights h3 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.highlights span {
+    color: #ff416c;
+    font-weight: bold;
+}
+
+.highlight-list {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.highlight-list li {
+    font-size: 1rem;
+    margin: 12px 0;
+    color: #444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Testimonials */
+.testimonials h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #ff416c;
+}
+
+.testimonial-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.testimonial {
+    background-color: #fff;
+    padding: 25px 20px;
+    border-radius: 15px;
+    max-width: 320px;
+    flex: 1 1 280px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.07);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial p {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.testimonial strong {
+    color: #222;
+    font-weight: 600;
+}
+
+.testimonial-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 2px solid #ff416c;
+}
+
+/* Footer */
+.site-footer {
+    background: linear-gradient(90deg, #ff416c, #ff4b2b);
+    color: white;
+    padding-top: 40px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 20px 30px;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-branding,
+.footer-links,
+.footer-download {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-branding h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-download {
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.footer-download-btn {
+    background-color: white;
+    color: #ff416c;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.footer-download-btn:hover {
+    background-color: #ffe5eb;
+}
+
+.playstore-img {
+    width: 140px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 15px 0;
+    background-color: #111;
+    font-size: 0.9rem;
+}
+
+/* Chatbot */
+#chatbox {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+#chatbot {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    z-index: 1000;
+}
+
+#chatlog {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    font-size: 0.9rem;
+}
+
+#chatlog div {
+    margin: 10px 0;
+    padding: 8px 12px;
+    border-radius: 10px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+/* User message */
+#chatlog div:nth-child(odd) {
+    align-self: flex-end;
+    background-color: #ff416c;
+    color: white;
+    text-align: right;
+}
+
+/* Bot message */
+#chatlog div:nth-child(even) {
+    align-self: flex-start;
+    background-color: #f1f1f1;
+    color: black;
+    text-align: left;
+}
+
+#chat-input-area {
+    display: flex;
+    border-top: 1px solid #ccc;
+}
+
+#chat-header {
+    background-color: #ff416c;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+#closeChat {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+#openChat {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 18px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 999;
+}
+
+#userInput {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    font-size: 0.9rem;
+}
+
+#sendButton {
+    background-color: #ff416c;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#sendButton:hover {
+    background-color: #ff6486;
+}
+
+/* Responsive */
+/* Responsive Design Enhancements */
+@media (max-width: 1024px) {
+    header {
+        padding: 150px 20px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-image img {
+        max-width: 250px;
+    }
+
+    .card {
+        max-width: 100%;
+    }
+
+    .testimonial {
+        max-width: 100%;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-download-btn {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 120px 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .download-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .hero-image img {
+        max-width: 220px;
+    }
+
+    .card {
+        padding: 20px 15px;
+    }
+
+    .testimonial {
+        padding: 20px 15px;
+    }
+
+    .highlight-list li {
+        font-size: 0.95rem;
+    }
+
+    .footer-branding h3 {
+        font-size: 20px;
+    }
+
+    .footer-links a {
+        font-size: 0.95rem;
+    }
+
+    #chatbot {
+        width: 95%;
+        right: 2.5%;
+        bottom: 90px;
+    }
+
+    #openChat {
+        bottom: 20px;
+        right: 20px;
+        font-size: 14px;
+        padding: 10px 16px;
+    }
+
+    #chat-header {
+        font-size: 0.95rem;
+    }
+
+    #chatlog {
+        font-size: 0.85rem;
+    }
+
+    #sendButton {
+        font-size: 0.85rem;
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 100px 15px;
+
+    }
+
+    .hero-text h1 {
+        font-size: 1.6rem;
+    }
+
+    .download-btn {
+        width: 100%;
+    }
+
+    .hero-image img {
+        padding-top: 15px;
+        max-width: 180px;
+    }
+
+    .cards,
+    .testimonial-cards {
+        gap: 15px;
+    }
+
+    .card,
+    .testimonial {
+        padding: 18px 12px;
+    }
+
+    .footer-download-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .playstore-img {
+        width: 120px;
+    }
+
+    #chatlog {
+        max-height: 200px;
+    }
+}
+
